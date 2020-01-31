@@ -62,8 +62,10 @@ public class TicTacToe {
 			System.out.println();
 		}
 		
-		if(ctr == 9 && !gameCompleted)
+		if(ctr == 9 && !gameCompleted) {
+			winner = "draw";
 			gameCompleted = true;
+		}
 	}
 	
 	private void makeMove() {
