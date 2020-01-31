@@ -85,10 +85,10 @@ public class TicTacToe {
 	}
 	
 	private void acceptMove() {
-		System.out.print("\nEnter your co-ordinates (0-3,0-3): ");
+		System.out.print("\nEnter your co-ordinates (1-3,1-3): ");
 		String[] userInput = scan.nextLine().split(",");
-		int row = Integer.parseInt(userInput[0]);
-		int col = Integer.parseInt(userInput[1]);
+		int row = Integer.parseInt(userInput[0]) - 1;
+		int col = Integer.parseInt(userInput[1]) - 1;
 		if(gameBoard[row][col] == null)
 			gameBoard[row][col] = user;
 		else {
